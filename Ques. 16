@@ -1,0 +1,37 @@
+Write a C program that accepts any two numbers up to 5 times. If the first number is smaller than the second, display the sum of their squares otherwise, sum of their cubes.
+-----------------------------------------------------------------------
+
+
+#include <stdio.h>
+int main() {
+    int num1, num2;
+
+    for (int i = 0; i < 5; i++) {
+        printf("Enter two numbers (Attempt %d of 5): ", i + 1);
+        scanf("%d %d", &num1, &num2);
+
+        if (num1 < num2) {
+            int sumOfSquares = (num1 * num1) + (num2 * num2);
+            printf("Sum of squares: %d\n", sumOfSquares);
+        } else {
+            int sumOfCubes = (num1 * num1 * num1) + (num2 * num2 * num2);
+            printf("Sum of cubes: %d\n", sumOfCubes);
+        }
+    }
+
+    return 0;
+}
+
+
+OUTPUT:-
+Enter two numbers (Attempt 1 of 5): 3 5
+Sum of squares: 34
+Enter two numbers (Attempt 2 of 5): 7 4
+Sum of cubes: 407
+Enter two numbers (Attempt 3 of 5): 2 2
+Sum of cubes: 16
+Enter two numbers (Attempt 4 of 5): 1 6
+Sum of squares: 37
+Enter two numbers (Attempt 5 of 5): 8 9
+Sum of squares: 145
+

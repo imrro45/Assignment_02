@@ -1,0 +1,22 @@
+Write a C program to print the following series:
+10, 22, 46, 94, 190, ...
+----------------------------------------------------------------------
+
+#include <stdio.h>
+int main() {
+    int term = 10, diff = 12;  // First term and first difference
+    printf("%d, ", term);
+
+    for (int i = 1; i < 5; i++) {  // Print 5 terms
+        term = term + diff;
+        printf("%d, ", term);
+        diff *= 2;  // Double the difference each time
+    }
+
+    return 0;
+}
+
+
+OUTPUT:-
+10, 22, 46, 94, 190,
+

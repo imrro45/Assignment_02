@@ -1,0 +1,26 @@
+Write a C program to print the following series:
+A + 1 + b + 2 + c + 3 + ...
+-----------------------------------------------------------------------------
+
+
+#include <stdio.h>
+int main() {
+    char letter = 'A';  // Start with 'A'
+    int number = 1;
+
+    for (int i = 0; i < 3; i++) {  // Print 3 pairs (letter + number)
+        printf("%c + %d + ", letter, number);
+        if (letter == 'A')
+            letter = 'b';  // After 'A', start lowercase 'b'
+        else
+            letter++;  // Increment the letter (c, d, ...)
+        number++;  // Increment the number
+    }
+
+    return 0;
+}
+
+OUTPUT:-
+A + 1 + b + 2 + c + 3 +
+
+

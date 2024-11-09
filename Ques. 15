@@ -1,0 +1,43 @@
+ Write a program to display all ASCII numbers and their equivalent character numbers and symbols. Use a do-while loop. The user should be prompted every time to press 'Y' or 'N'. If the user presses 'Y', display 
+the next alphabet otherwise terminate the program.
+----------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+int main() {
+    char choice;
+    int asciiValue = 0;
+
+    printf("ASCII Table Viewer\n");
+
+    do {
+        printf("ASCII Value: %d, Character: %c\n", asciiValue, asciiValue);
+        asciiValue++;
+
+        if (asciiValue > 127) { // ASCII values range from 0 to 127
+            printf("End of ASCII table.\n");
+            break;
+        }
+
+        printf("Do you want to display the next ASCII character? (Y/N): ");
+        scanf(" %c", &choice);  // Note the space before %c to ignore any newline characters
+
+    } while (choice == 'Y' || choice == 'y');
+
+    printf("Program terminated.\n");
+
+    return 0;
+}
+
+
+OUTPUT:-
+ASCII Table Viewer
+ASCII Value: 0, Character: 
+Do you want to display the next ASCII character? (Y/N): Y
+ASCII Value: 1, Character: 
+Do you want to display the next ASCII character? (Y/N): Y
+...
+ASCII Value: 65, Character: A
+Do you want to display the next ASCII character? (Y/N): N
+Program terminated.
+

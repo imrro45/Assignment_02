@@ -1,0 +1,23 @@
+Write a C program to print the following series:
+APK, BQL, CRM, DSN, ...
+-----------------------------------------------------------------
+
+
+#include <stdio.h>
+int main() {
+    char first = 'A', second = 'P', third = 'K';  // Initial characters
+
+    for (int i = 0; i < 4; i++) {  // Print 4 terms
+        printf("%c%c%c, ", first, second, third);
+        first++;  // Increment the first character
+        second++; // Increment the second character
+        third++;  // Increment the third character
+    }
+
+    return 0;
+}
+
+
+OUTPUT:-
+APK, BQL, CRM, DSN,
+

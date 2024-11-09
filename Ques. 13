@@ -1,0 +1,40 @@
+Write a program to enter an integer number and find the largest and the smallest digit of the number.
+----------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+int main() {
+    int number, digit;
+    int maxDigit = 0, minDigit = 9;
+
+    printf("Enter an integer number: ");
+    scanf("%d", &number);
+
+    // Make sure number is positive
+    if (number < 0) {
+        number = -number;
+    }
+
+    while (number > 0) {
+        digit = number % 10;
+        if (digit > maxDigit) {
+            maxDigit = digit;
+        }
+        if (digit < minDigit) {
+            minDigit = digit;
+        }
+        number /= 10;
+    }
+
+    printf("Largest digit: %d\n", maxDigit);
+    printf("Smallest digit: %d\n", minDigit);
+
+    return 0;
+}
+
+
+OUTPUT:-
+Enter an integer number: 39715
+Largest digit: 9
+Smallest digit: 1
+

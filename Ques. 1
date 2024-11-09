@@ -1,0 +1,21 @@
+Write a C program to print the following series:
+4, 36, 324, 2916, ...
+------------------------------------------------------------------------------------
+
+#include <stdio.h>
+int main() {
+    int term = 4;  // First term of the series
+    printf("%d, ", term);
+
+    for (int i = 1; i < 5; i++) {  // Print 5 terms
+        term = term * 9;
+        printf("%d, ", term);
+    }
+
+    return 0;
+}
+
+
+OUTPUT:-
+4, 36, 324, 2916, 26244,
+

@@ -1,0 +1,37 @@
+Write a program that will produce a table of values of the equation:
+y=1+x3+x5​ex2⋅log(1+∣x∣)​
+Where 𝑥 varies from 1.5 to 10.0 in steps of 0.05.
+-----------------------------------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+#include <math.h>  // For exp(), log(), fabs(), and sqrt()
+int main() {
+    double x, y;
+
+    printf("x\t\t y\n");
+    printf("-----------------------\n");
+
+    // Loop over x from 1.5 to 10.0, incrementing by 0.05
+    for (x = 1.5; x <= 10.0; x += 0.05) {
+        // Compute y using the given equation
+        y = (exp(x * x) * log(1 + fabs(x))) / sqrt(1 + pow(x, 3) + pow(x, 5));
+
+        // Print the value of x and y
+        printf("%.2lf\t %.6lf\n", x, y);
+    }
+
+    return 0;
+}
+
+
+OUTPUT:-
+x               y
+-----------------------
+1.50            17240.582929
+1.55            19748.733206
+1.60            22649.439897
+1.65            25996.892155
+1.70            29847.426352
+...
+

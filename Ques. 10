@@ -1,0 +1,30 @@
+Write a program to add numbers until the user enters zero.
+--------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+
+int main() {
+    int number, sum = 0;
+
+    do {
+        printf("Enter a number (0 to stop): ");
+        scanf("%d", &number);
+
+        sum += number;  // Add the number to the sum
+    } while (number != 0);  
+
+    printf("The total sum is: %d\n", sum);
+
+    return 0;
+}
+
+
+
+OUTPUT:-
+Enter a number (0 to stop): 5
+Enter a number (0 to stop): 10
+Enter a number (0 to stop): -3
+Enter a number (0 to stop): 0
+The total sum is: 12
+

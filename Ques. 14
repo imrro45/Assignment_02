@@ -1,0 +1,43 @@
+Write a program to find the total number of votes in favour of person ‘A’ and ‘B’. Assume 15 votes will be cast, and people will be voting for these two persons. Count the number of votes gained by ‘A’ and ‘B’.
+The user can enter their choice by pressing only ‘A’ and ‘B’.
+-----------------------------------------------------------------------------------------
+
+
+#include <stdio.h>
+int main() {
+    char vote;
+    int votesA = 0, votesB = 0, totalVotes = 15;
+
+    printf("Voting System - 15 votes to be cast (Press 'A' or 'B'):\n");
+
+    for (int i = 0; i < totalVotes; i++) {
+        printf("Enter vote %d: ", i + 1);
+        scanf(" %c", &vote);  // Note the space before %c to ignore any newline characters
+
+        if (vote == 'A' || vote == 'a') {
+            votesA++;
+        } else if (vote == 'B' || vote == 'b') {
+            votesB++;
+        } else {
+            printf("Invalid vote! Please enter 'A' or 'B' only.\n");
+            i--;  // To re-take the vote
+        }
+    }
+
+    printf("Total votes for A: %d\n", votesA);
+    printf("Total votes for B: %d\n", votesB);
+
+    return 0;
+}
+
+
+OUTPUT:-
+Voting System - 15 votes to be cast (Press 'A' or 'B'):
+Enter vote 1: A
+Enter vote 2: B
+Enter vote 3: A
+...
+Enter vote 15: B
+Total votes for A: 7
+Total votes for B: 8
+

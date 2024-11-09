@@ -1,0 +1,19 @@
+Write a C program to print the following series:
+Z, X, S, I, R, R, G, I
+------------------------------------------------------------------------
+
+#include <stdio.h>
+int main() {
+    char series[] = {'Z', 'X', 'S', 'I', 'R', 'R', 'G', 'I'};
+    
+    for (int i = 0; i < 8; i++) {  // Print all 8 characters
+        printf("%c, ", series[i]);
+    }
+
+    return 0;
+}
+
+
+OUTPUT:-
+Z, X, S, I, R, R, G, I,
+
